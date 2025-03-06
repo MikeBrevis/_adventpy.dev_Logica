@@ -3,23 +3,28 @@
 """ Santa Claus 🎅 ha recibido una lista de números mágicos que representan regalos 🎁, pero algunos de ellos están duplicados y deben ser eliminados para evitar confusiones. Además, los regalos deben ser ordenados en orden ascendente antes de entregárselos a los elfos.
 Tu tarea es escribir una función que reciba una lista de números enteros (que pueden incluir duplicados) y devuelva una nueva lista sin duplicados, ordenada en orden ascendente. """
 
-# Funtion with a list of random numbers
-def ordered_gifs(gifs) :
+# Define funtion, gifts_list, parameter gifts
+    #Var with a list, fixed_gifts_list
+    
+    #For x in range of len of gifts:
+        #If position x of gifts is not in fixed_gifts_list
+        # add position x of gifts in var fixed_gifts_list
 
-    """ list_gifs = list(dict.fromkeys(gifs))
-    list_gifs.sort() """
+#Return fixed fixed_gifts_list sirted
 
-    gifs.sort()
-    without_duplicates = list(dict.fromkeys(gifs))
-    return without_duplicates
+def gifts_list(gifts):
 
-    """ print (f"The sorted list without duplicates is {without_duplicates}") """
+    fixed_gifts_list = []
 
-gifs_1 = ordered_gifs([20, 20, 7, 6, 20, 30, 20, 15, 30, 33])
-print(gifs_1)
+    for gift in range(len(gifts)):
+        if gifts[gift] not in fixed_gifts_list:
+            fixed_gifts_list.append(gifts[gift])
 
-gifs_2 = ordered_gifs([])
-print(gifs_2)
+    return sorted(fixed_gifts_list)
+
+gifts_1 = gifts_list ([20, 20, 7, 6, 20, 30, 20])
+print (gifts_1)
+
 
 
 
